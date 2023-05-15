@@ -34,7 +34,9 @@ export function BatchExample() {
           functionName: "mint",
           args: [address],
         }
-      ]},
+    ],
+    enabled: true
+  },
   )
 
   const { write: batchMint, data } = useContractBatchWrite(config) 
