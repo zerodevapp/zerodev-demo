@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
     AppShell,
     Navbar,
@@ -16,6 +16,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { Link, useLocation } from 'react-router-dom';
 import { useAccount } from 'wagmi';
 import { Login } from './Login';
+import { ZeroDevWeb3Auth } from '@zerodevapp/web3auth';
 
 
 const useStyles = createStyles((theme, _params) => {
@@ -75,6 +76,13 @@ export function Dashboard({ children, links }: DashboardProps) {
     const [opened, setOpened] = useState(false);
     const { pathname } = useLocation()
     const { isConnected } = useAccount();
+
+    useEffect(() => {
+        if (isConnected) {
+            const zeroDevWeb3Auth = new ZeroDevWeb3Auth([process.env.REACT_APP_ZERODEV_PROJECT_ID || 'b5486fa4-e3d9-450b-8428-646e757c10f6'])
+            zeroDevWeb3Auth.getUserInfo().then(console.log)
+        }
+    }, [isConnected])
 
     if (!isConnected) {
         return <Login />
