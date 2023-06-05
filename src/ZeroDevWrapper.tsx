@@ -22,13 +22,13 @@ const { chains, provider, webSocketProvider } = configureChains(
 )
 
 const ZERO_DEV_PROJECT_ID = defaultProjectId
-const WEB3AUTH_CLIENT_ID = process.env.REACT_APP_ZEROKIT_WEB3AUTH_CLIENT_ID ?? 'BEjNZMt6TPboj3TfHM06MP8Yxz7cKQX6eK3KZzVhrIMi7jALcZHxJv5o3fDLM7EL4QfPlf2AV_qe155vyR3QxiU'
+const WEB3AUTH_CLIENT_ID = 'BEC7ovp0_w364BSBfAY5IjLATvrEoURl57-Dxrlzs23CrksSHGIyu78oHH9R_n9PZmavyvdtXLly9wkAFWXm6r8'
 const FACTORY_ADDRESS = '0x4E4946298614FC299B50c947289F4aD0572CB9ce'
 
 
 const zeroDevWeb3AuthOptions: ZeroDevWeb3AuthOptions = {
   adapterSettings: {
-    network: 'mainnet',
+    network: 'cyan',
   },
   web3authOptions: {
     clientId: WEB3AUTH_CLIENT_ID,

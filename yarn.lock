@@ -4617,10 +4617,18 @@
   resolved "https://registry.yarnpkg.com/@zerodevapp/contracts/-/contracts-2.0.8.tgz#b9e6164a032a3128428935f96440cc72f44b0e65"
   integrity sha512-o76jzJPJ2nb2zR72jP+R8AzFuEEAqtjPdMOKaQ9Jl/5XPf6CIAX6BjExFKNhJkuNOHhnoWuNABOlwfIifLGHvA==
 
-"@zerodevapp/sdk@3.1.29":
-  version "3.1.29"
-  resolved "https://registry.yarnpkg.com/@zerodevapp/sdk/-/sdk-3.1.29.tgz#7d6cce0ae429293cf71a4cf49c14e7b888ac8b46"
-  integrity sha512-M2BVXZ/NZzfJC2nVTT8453h1auLII7c0u0tZYuUEhb12mYhhbEEp3T8BNDZ4v1KdKQeLyh2oOUeK+1wxgxUWKQ==
+"@zerodevapp/kernel-contracts-v2@npm:@zerodevapp/contracts@^4.0.0-beta.9":
+  version "4.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@zerodevapp/contracts/-/contracts-4.0.0-beta.9.tgz#67b455e7a1644d4365dab354bbdae3e2f1cfa7fc"
+  integrity sha512-lom3AqUPmjA2ZcymuwQkz5Ab21YZ5S8sa2m1vqXmTcmmF79XgHMolRiffZTCunOTjvk2mm9VlTvSD8QJwLv/jQ==
+  dependencies:
+    "@account-abstraction/contracts" "^0.6.0"
+    dotenv "^16.0.3"
+
+"@zerodevapp/sdk@3.1.32":
+  version "3.1.32"
+  resolved "https://registry.yarnpkg.com/@zerodevapp/sdk/-/sdk-3.1.32.tgz#be878ba30750ee144238d45c37eb062f969a5807"
+  integrity sha512-yQ/Nqy9uyiwnFuHwtNmHi5k53AAVlZC9bajkskeiEzIJHRxNErsXiFhECHqQRaW/N6sDPlrihe1GPxx2YUfNjg==
   dependencies:
     "@account-abstraction/utils" "^0.4.0"
     "@ambire/signature-validator" "^1.3.0"
@@ -4636,31 +4644,32 @@
     "@types/debug" "^4.1.7"
     "@zerodevapp/contracts" "^2.0.8"
     "@zerodevapp/contracts-new" "npm:@zerodevapp/contracts@^3.0.0-rc.5"
+    "@zerodevapp/kernel-contracts-v2" "npm:@zerodevapp/contracts@^4.0.0-beta.9"
     base64-js "^1.5.1"
     debug "^4.3.4"
     merkletreejs "^0.3.9"
 
-"@zerodevapp/wagmi@3.1.15":
-  version "3.1.15"
-  resolved "https://registry.yarnpkg.com/@zerodevapp/wagmi/-/wagmi-3.1.15.tgz#67500bb627b177a2b299cffb410d1dcc623bcb97"
-  integrity sha512-ZR1eVZcVNMBVmWbnPFG2zkmVbcsjVpVx03bkT8unUfaEkxQswsulEhHUo8j67SbiyY6HNsS1RltDRyLc+gG60Q==
+"@zerodevapp/wagmi@3.1.20":
+  version "3.1.20"
+  resolved "https://registry.yarnpkg.com/@zerodevapp/wagmi/-/wagmi-3.1.20.tgz#8c2f6cf6d9789eaf829f9f5da27fba8780ede729"
+  integrity sha512-XvKJ9CJgGKFLg3aE2UlTa3wlbxX29t76iSx76S+MUFXH4oAkrMeYtTkPc0YigAqjIC+oIVXVB3J6ql4GGSKIrQ==
   dependencies:
-    "@zerodevapp/sdk" "3.1.29"
-    "@zerodevapp/web3auth" "3.1.14"
+    "@zerodevapp/sdk" "3.1.32"
+    "@zerodevapp/web3auth" "3.1.19"
     react "^18.2.0"
     wagmi "^0.12.0"
 
-"@zerodevapp/web3auth@3.1.14":
-  version "3.1.14"
-  resolved "https://registry.yarnpkg.com/@zerodevapp/web3auth/-/web3auth-3.1.14.tgz#9fcd12f6bc08d8e492b8cbca6ab8ad0293e72d64"
-  integrity sha512-f8J8eSFrFww2vJO0goJFSxvtAgiVnjFXqbj9sZyjrMnyNEW1mlruO1gWpt7sj7DbM+5+m5jn2Zi8SMIm0HBPwA==
+"@zerodevapp/web3auth@3.1.19":
+  version "3.1.19"
+  resolved "https://registry.yarnpkg.com/@zerodevapp/web3auth/-/web3auth-3.1.19.tgz#79128506bf531ae8d8d168a0781ce4de981646ea"
+  integrity sha512-8OoQQOnNZL1qixc4GV+qU0iQD9RdjQAmpqOzZDxA2sDNpNpNwr/p3R3W138xvvZQ0+1cO9dbLt4GwDYIMPQpTQ==
   dependencies:
     "@walletconnect/client" "^1.8.0"
     "@web3auth/base" "5.0.1"
     "@web3auth/modal" "5.0.1"
     "@web3auth/no-modal" "5.0.1"
     "@web3auth/openlogin-adapter" "5.0.1"
-    "@zerodevapp/sdk" "3.1.29"
+    "@zerodevapp/sdk" "3.1.32"
 
 JSONStream@^1.3.5:
   version "1.3.5"
@@ -6579,6 +6588,11 @@ dotenv@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
   integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
+
+dotenv@^16.0.3:
+  version "16.1.3"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.1.3.tgz#0c67e90d0ddb48d08c570888f709b41844928210"
+  integrity sha512-FYssxsmCTtKL72fGBSvb1K9dRz0/VZeWqFme/vSb7r7323x4CRaHu4LvQ5JG3+s6yt2YPbBrkpiEODktfyjI9A==
 
 dotignore@^0.1.2:
   version "0.1.2"
