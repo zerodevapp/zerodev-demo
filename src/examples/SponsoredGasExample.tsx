@@ -14,7 +14,7 @@ const description = `With ZeroDev, you can pay gas for your users, so they don't
 
 Try minting some NFTs below, without paying gas!`
 
-export function SponsoredGasExample({ label = undefined }) {
+export function SponsoredGasExample() {
   const { address } = useAccount();
   const { chain } = useNetwork()
 
@@ -26,7 +26,6 @@ export function SponsoredGasExample({ label = undefined }) {
     abi: contractAbi,
     functionName: "mint",
     args: [address],
-    enabled: true
   });
   const { write: mint } = useContractWrite(config);
 

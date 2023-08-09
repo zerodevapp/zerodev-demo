@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@alchemy/aa-core": "^0.1.0-alpha.14",
-    "@alchemy/aa-ethers": "^0.1.0-alpha.16",
+    "@alchemy/aa-core": "0.1.0-alpha.17",
+    "@alchemy/aa-ethers": "^0.1.0-alpha.21",
     "@emotion/react": "^11.10.5",
     "@mantine/core": "^5.10.2",
     "@mantine/hooks": "^5.10.2",

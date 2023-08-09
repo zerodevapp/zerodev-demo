@@ -2,7 +2,7 @@ import React from "react";
 import {
   WagmiConfig,
   configureChains,
-  createClient,
+  createConfig,
 } from "wagmi";
 import { publicProvider } from 'wagmi/providers/public'
 import { polygonMumbai } from 'wagmi/chains'
@@ -18,8 +18,9 @@ import {
 
 const defaultProjectId = process.env.REACT_APP_ZERODEV_PROJECT_ID || 'b5486fa4-e3d9-450b-8428-646e757c10f6'
 
-const { chains, provider, webSocketProvider } = configureChains(
+const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygonMumbai],
+  // USE YOUR OWN PROVIDER, THE PUBLIC PROVIDER IS UNRELIABLE
   [publicProvider()],
 )
 
@@ -27,26 +28,26 @@ const connectors = connectorsForWallets([
   {
     groupName: 'Social',
       wallets: [
-        googleWallet({options: { projectId: defaultProjectId}}),
-        facebookWallet({options: { projectId: defaultProjectId}}),
-        githubWallet({options: { projectId: defaultProjectId }}),
-        discordWallet({options: { projectId: defaultProjectId }}),
-        twitchWallet({options: { projectId: defaultProjectId }}),
-        twitterWallet({options: { projectId: defaultProjectId }}),
+        googleWallet({chains, options: { projectId: defaultProjectId}}),
+        facebookWallet({chains, options: { projectId: defaultProjectId}}),
+        githubWallet({chains, options: { projectId: defaultProjectId }}),
+        discordWallet({chains, options: { projectId: defaultProjectId }}),
+        twitchWallet({chains, options: { projectId: defaultProjectId }}),
+        twitterWallet({chains, options: { projectId: defaultProjectId }}),
     ],
   },
 ]);
 
-const client = createClient({
+const config = createConfig({
   autoConnect: false,
   connectors,
-  provider,
-  webSocketProvider,
+  publicClient,
+  webSocketPublicClient
 })
 
 function ZeroDevWrapper({children}: {children: React.ReactNode}) {
   return (
-    <WagmiConfig client={client}>
+    <WagmiConfig config={config}>
       <RainbowKitProvider theme={darkTheme()} chains={chains} modalSize="compact">
         {children}
       </RainbowKitProvider>
