@@ -5,6 +5,7 @@ import {
   createConfig,
 } from "wagmi";
 import { publicProvider } from 'wagmi/providers/public'
+import { infuraProvider } from 'wagmi/providers/infura'
 import { polygonMumbai } from 'wagmi/chains'
 import { connectorsForWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit'
 import { 
@@ -16,12 +17,13 @@ import {
   twitterWallet,
 } from '@zerodevapp/wagmi/rainbowkit'
 
-const defaultProjectId = process.env.REACT_APP_ZERODEV_PROJECT_ID || 'b5486fa4-e3d9-450b-8428-646e757c10f6'
+export const defaultProjectId = process.env.REACT_APP_ZERODEV_PROJECT_ID || 'b5486fa4-e3d9-450b-8428-646e757c10f6'
 
-const { chains, publicClient, webSocketPublicClient } = configureChains(
+export const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygonMumbai],
   // USE YOUR OWN PROVIDER, THE PUBLIC PROVIDER IS UNRELIABLE
-  [publicProvider()],
+  // [publicProvider()],
+  [infuraProvider({apiKey: 'f36f7f706a58477884ce6fe89165666c'})]
 )
 
 const connectors = connectorsForWallets([
