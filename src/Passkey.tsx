@@ -1,7 +1,7 @@
 import { Button, Flex } from "@mantine/core";
 import { chains, projectId } from "./ZeroDevWrapper";
 import { useConnect } from "wagmi";
-import { ZeroDevConnector } from "@zerodevapp/wagmi";
+import { ZeroDevConnector } from "@zerodev/wagmi";
 import { createPasskeyOwner, getPasskeyOwner, getOrCreatePasskeyOwner } from '@zerodev/sdk/passkey'
 
 

@@ -8,7 +8,7 @@ import {
 import contractAbi from "../resources/contracts/polygon-mumbai/0x34bE7f35132E97915633BC1fc020364EA5134863.json";
 import { Button, Anchor, Flex } from '@mantine/core';
 import { Page } from "../Page";
-import { usePrepareContractBatchWrite, useContractBatchWrite } from "@zerodevapp/wagmi";
+import { usePrepareContractBatchWrite, useContractBatchWrite } from "@zerodev/wagmi";
 
 const nftAddress = '0x34bE7f35132E97915633BC1fc020364EA5134863'
 

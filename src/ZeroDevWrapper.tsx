@@ -15,7 +15,7 @@ import {
   discordWallet,
   twitchWallet,
   twitterWallet,
-} from '@zerodevapp/wagmi/rainbowkit'
+} from '@zerodev/wagmi/rainbowkit'
 
 export const projectId = 'd00dbcef-2f10-479e-8c10-28a9fd95717d'
 

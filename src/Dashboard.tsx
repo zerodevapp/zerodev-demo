@@ -16,7 +16,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { Link, useLocation } from 'react-router-dom';
 import { useAccount } from 'wagmi';
 import { Login } from './Login';
-import { ZeroDevWeb3Auth } from '@zerodevapp/web3auth';
+import { ZeroDevWeb3Auth } from '@zerodev/web3auth';
 
 
 const useStyles = createStyles((theme, _params) => {
