@@ -1,22 +1,19 @@
 import { Button, Flex } from "@mantine/core";
-import { getWebAuthnAssertion } from "@turnkey/http/dist/webauthn";
-import { chains, defaultProjectId } from "./ZeroDevWrapper";
-import { SmartAccountSigner } from "@alchemy/aa-core";
+import { chains, projectId } from "./ZeroDevWrapper";
 import { useConnect } from "wagmi";
 import { ZeroDevConnector } from "@zerodevapp/wagmi";
-//@ts-expect-error
-import { createPasskeyOwner, getPasskeyOwner } from '@zerodevapp/sdk/passkey'
+import { createPasskeyOwner, getPasskeyOwner, getOrCreatePasskeyOwner } from '@zerodev/sdk/passkey'
 
 
 
 function Passkey() {
   const { connect } = useConnect()
 
-    const handleRegister = async (name: string) => {
+    const handleEnter = async () => {
       connect({
         connector: new ZeroDevConnector({chains, options: {
-          projectId: defaultProjectId,
-          owner: await createPasskeyOwner({name: 'ZeroDev', projectId: defaultProjectId})
+          projectId,
+          owner: await getOrCreatePasskeyOwner({name: 'ZeroDev', projectId})
         }})
       })
     }
@@ -24,10 +21,19 @@ function Passkey() {
     const handleLogin = async () => {
         connect({
           connector: new ZeroDevConnector({chains, options: {
-            projectId: defaultProjectId,
-            owner: await getPasskeyOwner({projectId: defaultProjectId})
+            projectId,
+            owner: await getPasskeyOwner({projectId})
           }})
         })
+    }
+
+    const handleRegister = async () => {
+      connect({
+        connector: new ZeroDevConnector({chains, options: {
+          projectId,
+          owner: await createPasskeyOwner({name: 'ZeroDev', projectId})
+        }})
+      })
     }
     
 
@@ -43,11 +49,18 @@ function Passkey() {
           <Button
             loading={false}
             size={'lg'}
-            onClick={() => handleRegister('Test 2')}
+            onClick={handleRegister}
             variant={'outline'}
           >
             Register
           </Button>
+          {/* <Button
+            loading={false}
+            size={'lg'}
+            onClick={handleEnter}
+          >
+            Enter
+          </Button> */}
         </Flex>
     )
 
