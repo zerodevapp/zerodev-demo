@@ -4544,33 +4544,33 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zerodev/sdk@4.0.2-passkey.1":
-  version "4.0.2-passkey.1"
-  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.2-passkey.1.tgz#d6a119990606bbe0545fd914e24d99b74b1c527e"
-  integrity sha512-4Qxk5jzX2bgEOGJTJIhIw+aChqrICrb6MxR3cc+d2w5iQfXVUox01Iy4CdCICDC7d8nXdkaclU127dlNeC6LdA==
+"@zerodev/sdk@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.0.tgz#081a8ccc9a1c5c3a6cb20735271d04d2ef9a17a4"
+  integrity sha512-S/B12dszrmsmcaUyIHe1HlU+pmZYPlaYs8QfnqsyePQFVLciHvuaNtNZuIsaxqmx3jRa+L7cgGWI55nA+p/ZkA==
   dependencies:
     axios "^1.4.0"
     viem "^1.5.3"
 
-"@zerodev/wagmi@4.0.0-passkey.0":
-  version "4.0.0-passkey.0"
-  resolved "https://registry.yarnpkg.com/@zerodev/wagmi/-/wagmi-4.0.0-passkey.0.tgz#4ff0066d13b2ae2abc77825f9d970d514f7a9920"
-  integrity sha512-sDumJGSCfAKCY3ENgNTqteRNw1Kjt1AEtxjcblRF3i9uWLuoJcKYsSBcTo8f1cPChclDKtAyhsSrn3cPJ6i3tw==
+"@zerodev/wagmi@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@zerodev/wagmi/-/wagmi-4.0.0.tgz#3289d8411a956493652ad397d21285f98b23e6c4"
+  integrity sha512-j9roSV7Cs/W6rRk25rXsM50ALlZsMv46c9V22HlwgdSUEm3QPSgBIAM2Sl2I/HDRSye2ytg5mkKSihMKyTXdLw==
   dependencies:
-    "@zerodev/sdk" "4.0.2-passkey.1"
-    "@zerodev/web3auth" "4.0.0-passkey.0"
+    "@zerodev/sdk" "4.0.0"
+    "@zerodev/web3auth" "4.0.0"
 
-"@zerodev/web3auth@4.0.0-passkey.0":
-  version "4.0.0-passkey.0"
-  resolved "https://registry.yarnpkg.com/@zerodev/web3auth/-/web3auth-4.0.0-passkey.0.tgz#a503117a2b2a5cb84532eb6d68a35f813f1cbe0b"
-  integrity sha512-R48A3pbPo2KhX+15tWnJURxF3/coyD3SKBWmVpR7I/3MW9eUBuqjmpQOCtZzUdMgH1bEUq+TY3p39GiA5Kz+hA==
+"@zerodev/web3auth@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@zerodev/web3auth/-/web3auth-4.0.0.tgz#3fe81c319f510beb5600ea226c321568e27c0a03"
+  integrity sha512-QdJZufPz2BJGRapWHmZZPQ3NGY07sc6cDPReVdK0b3FsfQGexzcs7AgpNGxLv1LobFuRi5gpLJMV8PMeBBgyOg==
   dependencies:
     "@walletconnect/client" "^1.8.0"
     "@web3auth/base" "5.0.1"
     "@web3auth/modal" "5.0.1"
     "@web3auth/no-modal" "5.0.1"
     "@web3auth/openlogin-adapter" "5.0.1"
-    "@zerodev/sdk" "4.0.2-passkey.1"
+    "@zerodev/sdk" "4.0.0"
 
 JSONStream@^1.3.5:
   version "1.3.5"
