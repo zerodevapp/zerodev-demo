@@ -16,7 +16,7 @@ import {
   twitterWallet,
 } from '@zerodev/wagmi/rainbowkit'
 
-export const projectId = 'd00dbcef-2f10-479e-8c10-28a9fd95717d'
+export const projectId = 'b5486fa4-e3d9-450b-8428-646e757c10f6'
 
 export const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygonMumbai],
