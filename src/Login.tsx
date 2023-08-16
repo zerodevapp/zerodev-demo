@@ -45,8 +45,9 @@ export function Login() {
           </Text>
         </Title>
         <ConnectButton label={"Start Demo"} />
-        {/* <Passkey /> */}
         ZeroDev will create an AA wallet for you using social accounts.
+        {/* <Passkey /> */}
+        {/* ZeroDev will create an AA wallet for you using passkeys. */}
       </Flex>
     </Container>
   );
