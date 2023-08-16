@@ -1,6 +1,6 @@
 import { createStyles, Title, Text, Container, Flex, Button } from '@mantine/core';
 import { ReactComponent as ZeroDevLogo } from './resources/assets/images/logo.svg';
-import Passkey from './Passkey';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -44,9 +44,10 @@ export function Login() {
             Account Abstraction
           </Text>
         </Title>
-        {/* <ConnectButton label={"Start Demo"} /> */}
-        <Passkey />
-        ZeroDev will create an AA wallet for you using passkeys.
+        <ConnectButton label={"Start Demo"} />
+        ZeroDev will create an AA wallet for you using social accounts.
+        {/* <Passkey /> */}
+        {/* ZeroDev will create an AA wallet for you using passkeys. */}
       </Flex>
     </Container>
   );

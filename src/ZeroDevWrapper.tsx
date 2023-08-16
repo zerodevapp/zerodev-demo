@@ -4,7 +4,6 @@ import {
   configureChains,
   createConfig,
 } from "wagmi";
-import { publicProvider } from 'wagmi/providers/public'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { polygonMumbai } from 'wagmi/chains'
 import { connectorsForWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit'
