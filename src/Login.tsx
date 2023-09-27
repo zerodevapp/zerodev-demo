@@ -1,7 +1,7 @@
 import { createStyles, Title, Text, Container, Flex, Button } from '@mantine/core';
 import { ReactComponent as ZeroDevLogo } from './resources/assets/images/logo.svg';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import Passkey from './Passkey';
+// import Passkey from './Passkey';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
