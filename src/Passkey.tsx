@@ -14,7 +14,7 @@ function Passkey() {
 
     const handleLogin = async () => {
       setLoginLoading(true)
-      const owner = await getPasskeyOwner({projectId, withCredentials: true, name})
+      const owner = await getPasskeyOwner({projectId, name})
       if (owner) {
         connect({
           connector: new ZeroDevConnector({chains, options: {
@@ -28,7 +28,7 @@ function Passkey() {
 
     const handleRegister = async () => {
       setRegisterLoading(true)
-      const owner = await createPasskeyOwner({name, projectId, withCredentials: true})
+      const owner = await createPasskeyOwner({name, projectId })
       if (owner) {
         connect({
           connector: new ZeroDevConnector({chains, options: {

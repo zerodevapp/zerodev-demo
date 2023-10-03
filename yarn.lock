@@ -4581,10 +4581,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zerodev/sdk@4.0.24":
-  version "4.0.24"
-  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.24.tgz#6c540158f002d2f61dea7766dd5405a7db977084"
-  integrity sha512-p/bR9THccwF2PPLaBTX3PFut1hF0BD9SmUWGbgMeLJB2ca+mAdtIuwjl/KbmsubbVZrHRl9HXMvCOfc2Eck3qQ==
+"@zerodev/sdk@4.0.25":
+  version "4.0.25"
+  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.25.tgz#9a353375d206d1e67eabbe7d81f36182e042802b"
+  integrity sha512-S++aNpinlvYV7raukIulw374plby2rNfO8PiSTbzTlF8me1Y+cRjsaxoJ3Uk7j4RDqCyQzF8DWVTBzezX5/sAw==
   dependencies:
     "@alchemy/aa-core" "0.1.0-alpha.23"
     "@alchemy/aa-ethers" "0.1.0-alpha.23"
@@ -4592,26 +4592,26 @@
     merkletreejs "^0.3.10"
     viem "^1.5.3"
 
-"@zerodev/wagmi@4.1.10":
-  version "4.1.10"
-  resolved "https://registry.yarnpkg.com/@zerodev/wagmi/-/wagmi-4.1.10.tgz#b58bb4ed677651cba20a8eadda08fbe3d40c63c6"
-  integrity sha512-eSN3nu5cgOq5Emp5Ci9hkyUpJ0yG+3SniASzoItaKo2JRPBq6nai2z0kOEQPS24oRkGr+8MT78FsHCrgcee/Sg==
+"@zerodev/wagmi@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@zerodev/wagmi/-/wagmi-4.1.11.tgz#caee271cb8319ecdd4a246c96da61fb2cfcc6661"
+  integrity sha512-MlXqy41PWT7Dgqh+4Hx10Z4LIeNcEWBZMltsa7SOeD8rlnLAWDKlzdOxuLadJv9c00m3i9tebIPqoJ4d6b5Nzg==
   dependencies:
-    "@zerodev/sdk" "4.0.24"
-    "@zerodev/web3auth" "4.1.8"
+    "@zerodev/sdk" "4.0.25"
+    "@zerodev/web3auth" "4.1.9"
     ethers "5.7.2"
 
-"@zerodev/web3auth@4.1.8":
-  version "4.1.8"
-  resolved "https://registry.yarnpkg.com/@zerodev/web3auth/-/web3auth-4.1.8.tgz#d449876f0875f582d1c47b5f870db7f2caa5bc22"
-  integrity sha512-MnOLjGx284ViNjq2pQ/VL4aY+0wHDEgwYyDYCExj40Vy4Vx8BDb8qmQaQWY4QYFHnUwdbVvi2dVCeX+PPv5Trg==
+"@zerodev/web3auth@4.1.9":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@zerodev/web3auth/-/web3auth-4.1.9.tgz#38a16b100dad591db9e522fbddd05a84828a9eca"
+  integrity sha512-e3ZfgQmKWadNSVGGZbx/t/Yo2XF38UlM3FDXLwUFzH7iwIolMIdr72rCDbv0dhu7H74QT8nQ7japTlE6ujaXag==
   dependencies:
     "@web3auth/base" "7.0.1"
     "@web3auth/ethereum-provider" "7.0.2"
     "@web3auth/modal" "7.0.3"
     "@web3auth/no-modal" "7.0.1"
     "@web3auth/openlogin-adapter" "7.0.1"
-    "@zerodev/sdk" "4.0.24"
+    "@zerodev/sdk" "4.0.25"
 
 JSONStream@^1.3.5:
   version "1.3.5"
