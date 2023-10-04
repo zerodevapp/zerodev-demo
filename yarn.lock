@@ -4592,6 +4592,17 @@
     merkletreejs "^0.3.10"
     viem "^1.5.3"
 
+"@zerodev/sdk@4.0.26":
+  version "4.0.26"
+  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.26.tgz#455edd1f38789bc59e06ce244f6d89a2067266a6"
+  integrity sha512-+vCY94RMNlqSuYz4IEUYEJd/tXe3Z+3bwDKlKI2GQ6a/Ez12I4qs98VhXnYudaAqjc0n0k1aJijYrFbfswa7lA==
+  dependencies:
+    "@alchemy/aa-core" "0.1.0-alpha.23"
+    "@alchemy/aa-ethers" "0.1.0-alpha.23"
+    axios "^1.4.0"
+    merkletreejs "^0.3.10"
+    viem "^1.5.3"
+
 "@zerodev/wagmi@4.1.11":
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/@zerodev/wagmi/-/wagmi-4.1.11.tgz#caee271cb8319ecdd4a246c96da61fb2cfcc6661"
