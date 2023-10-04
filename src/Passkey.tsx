@@ -2,10 +2,11 @@ import { Button, Flex, Input } from "@mantine/core";
 import { chains, projectId } from "./ZeroDevWrapper";
 import { useConnect } from "wagmi";
 import { ZeroDevConnector } from "@zerodev/wagmi";
-import { createPasskeyOwner, getPasskeyOwner, getAutocompletePasskeyOwner } from '@zerodev/sdk/passkey'
-import { useEffect, useState } from "react";
+import { createPasskeyOwner, getPasskeyOwner, getAutocompletePasskeyOwner, abortWebauthn } from '@zerodev/sdk/passkey'
+import { useCallback, useEffect, useState } from "react";
 
 function Passkey() {
+  const [focused, setFocused] = useState(false)
   const [name, setName] = useState('')
   const [loginLoading, setLoginLoading] = useState(false)
   const [registerLoading, setRegisterLoading] = useState(false)
@@ -41,18 +42,29 @@ function Passkey() {
     }
 
     useEffect(() => {
-      (async () => {
-        const owner = await getAutocompletePasskeyOwner({projectId})
-        if (owner) {
-          connect({
-            connector: new ZeroDevConnector({chains, options: {
-              projectId,
-              owner
-            }})
-          })
-        }
-      })()
-    }, [connect])
+      if (!focused) {
+        getAutocompletePasskeyOwner({projectId}).then((owner) => {
+          if (owner) {
+            connect({
+              connector: new ZeroDevConnector({chains, options: {
+                projectId,
+                owner
+              }})
+            })
+          }
+        })
+      }
+    }, [connect, focused])
+
+    const handleFocus = useCallback(() => {
+      setFocused(true)
+    }, [])
+
+    const handleBlur = useCallback(() => {
+      setFocused(false)
+      abortWebauthn()
+    }, [])
+
 
     return (
       <>
@@ -62,19 +74,8 @@ function Passkey() {
           autoComplete="username webauthn" 
           value={name} 
           onChange={(e) => setName(e.target.value)} 
-          onFocus={() => {
-            getAutocompletePasskeyOwner({projectId}).then((owner) => {
-              if (owner) {
-                connect({
-                  connector: new ZeroDevConnector({chains, options: {
-                    projectId,
-                    owner
-                  }})
-                })
-              }
-
-            })
-          }}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
         />
         <Flex gap={'lg'}>
           <Button
