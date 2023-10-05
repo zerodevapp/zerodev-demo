@@ -8,8 +8,6 @@ import {
     Anchor,
     useMantineTheme,
 } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 
 const useStyles = createStyles((theme, _params) => {
@@ -51,11 +49,9 @@ export interface DashboardProps {
 export function Page({ children, title, description, docs }: DashboardProps) {
     const { classes } = useStyles();
     const theme = useMantineTheme()
-    const matches = useMediaQuery(`(max-width: ${theme.breakpoints.lg}px)`);
 
     return (
         <Flex direction={'column'} mih={'100%'} align={'center'} justify={'flex-start'} mt={30}>
-            {matches && <ConnectButton />}
                 <Container style={{flex: 1, marginTop: 30}}>
                     <Box mb={50} style={{ textAlign: 'center' }}>
                         <Title className={classes.title}>{title}</Title>

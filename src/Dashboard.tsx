@@ -12,7 +12,6 @@ import {
 } from '@mantine/core';
 import { ReactComponent as ZeroDevLogo } from './resources/assets/images/logo.svg';
 import { useMediaQuery } from '@mantine/hooks';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { Link, useLocation } from 'react-router-dom';
 import { useAccount } from 'wagmi';
 import { Login } from './Login';
@@ -119,9 +118,6 @@ export function Dashboard({ children, links }: DashboardProps) {
                             </Link>
                         ))}
                     </Navbar.Section>
-                    {mdMatches && <Navbar.Section className={classes.footer}>
-                        <ConnectButton />
-                    </Navbar.Section>}
                 </Navbar>
             }
             header={
