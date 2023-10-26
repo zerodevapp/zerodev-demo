@@ -4631,10 +4631,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zerodev/sdk@4.0.29":
-  version "4.0.29"
-  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.29.tgz#2d64b3876d4d651a544000ff1886ba79812f5801"
-  integrity sha512-RZ6J91Dza87xc3/2iF5mlau8/fDZ/wPZ385F0dvB2TmN7PjvOz0+XtePkKnQDpCTJCdoFy0XBh6LGkmlemSNmw==
+"@zerodev/sdk@4.0.31":
+  version "4.0.31"
+  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.31.tgz#2e27b6be430a1a092ae91e74e4c0dbf3bd15e33e"
+  integrity sha512-uQHHmvu8YID9zWTQ+JIzqNO8axpPkIQjV/G/+8qPJPt6M0pWosR1R98ykNVc5V8AimJq/y3bFLsV+rrybzB7IQ==
   dependencies:
     "@alchemy/aa-core" "0.1.0-alpha.23"
     "@alchemy/aa-ethers" "0.1.0-alpha.23"
@@ -4642,10 +4642,10 @@
     merkletreejs "^0.3.10"
     viem "^1.5.3"
 
-"@zerodev/sdk@4.0.30":
-  version "4.0.30"
-  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.30.tgz#569807df6d8daaacdbeea45dc938138d73231324"
-  integrity sha512-5z0wvt6YaySTGR3LU2z2W3JrveY5y8VB7aSkuPBFIufiKsch3WWR8MbcM3cWjfNu6fJx9E53IfzNwWA2PcorVw==
+"@zerodev/sdk@4.0.32":
+  version "4.0.32"
+  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-4.0.32.tgz#8a4601ad3a00ba949eb54829a4aed51ebdc1fce3"
+  integrity sha512-qkT/CZeCi1TSrbxF0WeK6F1sC75WeqYx/ge82UchAkg1IsWcxOiWNESrOXgJIuqT0H5S3rxbigXGYr6f3SEg/w==
   dependencies:
     "@alchemy/aa-core" "0.1.0-alpha.23"
     "@alchemy/aa-ethers" "0.1.0-alpha.23"
@@ -4653,26 +4653,26 @@
     merkletreejs "^0.3.10"
     viem "^1.5.3"
 
-"@zerodev/wagmi@4.1.19":
-  version "4.1.19"
-  resolved "https://registry.yarnpkg.com/@zerodev/wagmi/-/wagmi-4.1.19.tgz#85a70ac709882907056e70fde382f196d1b19b68"
-  integrity sha512-tbwvLbPAxg45jvP+YYdvd11bSbGOkuSe/1/9nkVGVstDssMRLVyuhvFPbT+wo4vS8RFoXZEcXfiZrpnLgishoA==
+"@zerodev/wagmi@4.1.21":
+  version "4.1.21"
+  resolved "https://registry.yarnpkg.com/@zerodev/wagmi/-/wagmi-4.1.21.tgz#503d1a97004d487aaab839b634749415210d96d8"
+  integrity sha512-pHJv3BzW86+hKqyGHe1wlcFSgeZabExcxoPYXXk5J+4ydEpd9s3H2I9lsQAI0PGqp/Q53o8cjnRsZWzXQDUSAA==
   dependencies:
-    "@zerodev/sdk" "4.0.29"
-    "@zerodev/web3auth" "4.1.16"
+    "@zerodev/sdk" "4.0.31"
+    "@zerodev/web3auth" "4.1.17"
     ethers "5.7.2"
 
-"@zerodev/web3auth@4.1.16":
-  version "4.1.16"
-  resolved "https://registry.yarnpkg.com/@zerodev/web3auth/-/web3auth-4.1.16.tgz#b66f72a2e2371c8db60c211772f38dc801c93e46"
-  integrity sha512-zuitM0gb3qrb+eTCbdb0ZJbx2ao4QVaR3VoDyrS2ZLbPi82poR8Yn2JoaT9XNjrLv5T7ME9lUNKxdScJpEN8rQ==
+"@zerodev/web3auth@4.1.17":
+  version "4.1.17"
+  resolved "https://registry.yarnpkg.com/@zerodev/web3auth/-/web3auth-4.1.17.tgz#b2616e342e600ef18f86b36c37c08235632e2c54"
+  integrity sha512-jeYmLuX99WLfJhVDvVDxPNJL1nuhwqvtFf+B1TJR7hhKVGGOT2nv04n/RAKgvYzuHGIJrVVdY1+m1bHhQBQzcg==
   dependencies:
     "@web3auth/base" "7.0.1"
     "@web3auth/ethereum-provider" "7.0.2"
     "@web3auth/modal" "7.0.3"
     "@web3auth/no-modal" "7.0.1"
     "@web3auth/openlogin-adapter" "7.0.1"
-    "@zerodev/sdk" "4.0.29"
+    "@zerodev/sdk" "4.0.31"
 
 JSONStream@^1.3.5:
   version "1.3.5"
