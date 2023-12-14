@@ -27,7 +27,7 @@ const connectors = connectorsForWallets([
   {
     groupName: 'Social',
       wallets: [
-        googleWallet({chains, options: { projectId}}),
+        googleWallet({chains, options: { projectId }}),
         facebookWallet({chains, options: { projectId}}),
         githubWallet({chains, options: { projectId }}),
         discordWallet({chains, options: { projectId }}),
